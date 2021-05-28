@@ -1,0 +1,81 @@
+.about {
+  position: relative;
+  overflow: hidden;
+  height: 580px;
+  background-color: var(--color-eastbay);
+
+  &__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__text {
+    width: 34%;
+    transform: translateY(40px);
+  }
+
+  &__figer {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  &__title {
+    margin-bottom: var(--second-offset);
+    color: var(--color-white);
+  }
+
+  &__quote {
+    font: var(--book-font);
+    color: var(--color-white);
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  &__author {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: var(--second-offset);
+    font: var(--postmiddle-font);
+    font-style: normal;
+    color: var(--color-white);
+    transform: translateX(42px);
+
+    &::before {
+      content: "";
+      display: inline-block;
+      margin-top: 7px;
+      margin-right: var(--second-offset);
+      width: 30px;
+      height: 3px;
+      background-color: var(--color-white);
+    }
+  }
+
+  &__image {
+    position: absolute;
+    right: 114px;
+    top: -150px;
+    flex-shrink: 0;
+    overflow: hidden;
+    width: 500px;
+    height: 950px;
+    transform: rotate(15deg);
+
+    img {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 200%;
+      height: 100%;
+      max-width: none;
+      object-fit: cover;
+      transform: rotate(-15deg) translateX(-50%);
+    }
+  }
+}
